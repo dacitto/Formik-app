@@ -2,7 +2,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 //import { makeStyles } from "@mui/styles";
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import Header from "./components/Header";
 import Button from "./components/Forms/Button";
 import Textfield from "./components/Forms/Textfield";
@@ -88,6 +88,10 @@ function App() {
 
                   <Grid item xs={12}>
                     <DropzoneAreaBase
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                       acceptedFiles={["image/*"]}
                       dropzoneText={"Drag and drop prduct image here or click"}
                       onChange={(files) => console.log("Files:", files)}
@@ -120,6 +124,11 @@ function App() {
             </Formik>
           </div>
         </Container>
+      </Grid>
+      <Grid style={{ margin: "-1rem auto" }}>
+        <Box>
+          <a href="https://github.com/dacitto">Dacitto Github</a>
+        </Box>
       </Grid>
     </Grid>
   );
